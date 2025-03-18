@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const DeloitteChatUI = () => {
+    const [prompt, setPrompt] = useState("");
+    const [response, setResponse] = useState("");
 
-export default App;
+    const handleSend = async () => {
+        if (!prompt.trim()) return;
+
+        const res = await fetch("http://localhost:5001/api/tax-query", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ prompt }),
+        });
+
+        const data = await res.json();
+        setResponse(data.response);
+    };
+
+    return (
+        <div className="chat-container">
+            <h2>Deloitte Auditor Chat UI</h2>
+            <textarea 
+                className="chat-textarea"
+                rows="4" 
+                placeholder="Enter Tax Prompt..."
+                value={prompt}
+                onChange={(e) => setPrompt(e.target.value)}
+            />
+            <div className="chat-buttons">
+                <button className="chat-button send-button" onClick={handleSend}>Send</button>
+                <button className="chat-button cancel-button" onClick={() => setPrompt("")}>Cancel</button>
+            </div>
+            <div className="response-box">
+                {response}
+            </div>
+        </div>
+    );
+};
+
+export default DeloitteChatUI;

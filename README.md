@@ -1,69 +1,27 @@
-📝 Deloitte Auditor Chat UI
+# Gemini 2.0 Flash Chat App 💬✨
 
-A modern and interactive AI-powered chat interface designed to help auditors and businesses with tax-related queries. Built using React, Node.js, Express, and AI models (GPT or Gemini).
+This project is a full-stack AI-powered chat application that integrates **Google’s Gemini 2.0 Flash-001**, a cutting-edge multimodal large language model (LLM), to enable natural language conversations through a sleek web interface.
 
-🚀 Features
+Gemini 2.0 Flash is optimized for fast, scalable, and context-rich interactions, supporting up to **1 million tokens** and designed for tasks like reasoning, code generation, data extraction, and question answering. This app demonstrates how to integrate Gemini’s powerful capabilities into a real-time chat experience.
 
-✅ AI-Powered Responses – Provides accurate tax-related answers.
-✅ Modern UI Design – Elegant interface with smooth animations.
-✅ Real-time Communication – Fetch responses instantly via API.
-✅ Secure & Optimized – Uses .gitignore to protect sensitive files.
-✅ Fully Responsive – Works across all devices.
+---
 
-📸 Screenshots
+## 🧠 Key Features
 
-Add some screenshots of your UI here for better visibility.
-🛠️ Technologies Used
+- Built using **React** (frontend) and **Express.js** (backend)
+- Connects to Gemini via the official `@google/generative-ai` SDK
+- Uses `startChat()` to generate contextual, smart replies
+- Includes a Gemini-themed UI with **Prompt**, **Send/Cancel**, and **Response** sections
+- Logs interactions locally to support review and auditing
 
-Frontend: React.js, CSS (Custom, No Tailwind), Framer Motion
-Backend: Node.js, Express.js
-AI Model: OpenAI GPT or Google Gemini API
-Version Control: Git & GitHub
-📂 Project Structure
+---
 
-📂 Deloitte Chat UI
- ┣ 📜 package.json  # Project Dependencies
- ┣ 📜 README.md  # Project Documentation
- ┣ 📂 src
- ┃ ┣ 📜 App.js  # Main React Component
- ┃ ┣ 📜 DeloitteChatUI.js  # Chat UI Component
- ┃ ┣ 📜 styles.css  # Custom CSS
- ┃ ┣ 📜 index.js  # Entry Point
- ┣ 📂 server
- ┃ ┣ 📜 server.js  # Node.js Backend Server
- ┃ ┣ 📜 .env  # API Keys (Ignored in Git)
-🔧 Installation & Setup
+## 🖼️ App Screenshots
 
-1️⃣ Clone the Repository
-git clone https://github.com/samrudhsivva/deloitte-chat-ui.git
-cd deloitte-chat-ui
-2️⃣ Install Dependencies
-npm install
-3️⃣ Set Up Environment Variables
-Create a .env file in the server folder and add:
+<img src="./public/chat-1.png" alt="Gemini Chat App UI" width="600" />
+<img src="./public/chat-2.png" alt="Gemini Chat App UI" width="600" />
 
-OPENAI_API_KEY=your-api-key
-or for Google Gemini:
 
-GEMINI_API_KEY=your-gemini-api-key
-4️⃣ Start the Backend Server
-cd server
-node server.js
-5️⃣ Start the Frontend
-npm start
-🔄 How to Contribute
+---
 
-Fork the repo on GitHub
-Clone your fork locally
-Create a new branch for your feature
-Commit your changes with meaningful messages
-Push to GitHub and open a Pull Request (PR)
-⚡ Future Improvements
-
-✅ Improve AI Model Accuracy
-✅ Add Authentication for Secure Queries
-✅ Enhance UI/UX with Dark Mode
-📜 License
-
-This project is open-source under the MIT License. Feel free to use and contribute! 🚀
-
+> Powered by Google Gemini 2.0 Flash | Built for intelligent conversations ✨
